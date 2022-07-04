@@ -1,4 +1,6 @@
-# Heading 1 #
+# Vending Machine Assignment #
+
+## Features (View -> Controller -> Service -> DAO -> DTO ##
 - The program should display all of the items and their respective prices when the program starts, along with an option to exit the program.
 - The user must put in some amount of money before an item can be selected.
 - Only one item can be vended at a time.
