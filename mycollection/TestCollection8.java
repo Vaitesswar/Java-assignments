@@ -7,7 +7,7 @@ import java.util.TreeMap;
 public class TestCollection8 {
 
     public static void main(String[] args) {
-        Map<Integer, Integer> myMap = new TreeMap<>(); // LinkedHashMap -> Sorted map (order of insertion becomes irrelevant).
+        Map<Integer, Integer> myMap = new TreeMap<>(); // TreeMap< -> Sorted map (order of insertion becomes irrelevant).
         myMap.put(1, null);
         myMap.put(5, 4);
         myMap.put(2, null);
