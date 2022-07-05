@@ -1,4 +1,4 @@
-##Program features##
+## Program features ##
 
 The program stores information about a DVD collection. The program have the following methods:
 
