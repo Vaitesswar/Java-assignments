@@ -1,0 +1,4 @@
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total,OrderDate
+1,Ada,TX,4.45,Tile,249.00,3.50,4.15,871.50,1033.35,84.77,1989.62,06012013
+2,Doctor Who,WA,9.25,Wood,243.00,5.15,4.75,1251.45,1154.25,216.51,2622.21,06022013
+4,,TX,4.45,Wood,150.00,5.15,4.75,772.50,712.50,66.08,1551.08,07012013
