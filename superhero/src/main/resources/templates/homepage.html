@@ -1,0 +1,43 @@
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Homepage</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+   		<link th:href="@{styles/main.css}" rel="stylesheet" />    
+    </head>
+<body>
+
+  <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+  <body class="d-flex h-100 text-center text-white bg-dark">
+    
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+    <div th:replace="~{fragments/headerdropdown :: headerdropdown}"> </div>
+  </header>
+
+  <main class="px-3">
+    <h1>Welcome to Superhero Sighting Application</h1>
+    <p class="lead">With the rising popularity of superhero movies, there has been a heightened awareness of superheroes in our midst. 
+    				The frequency of superhero (and supervillain) sightings is increasing at an alarming rate. Given this development, 
+    				this Spring Boot web application aims at monitoring the sightings of these superheros and supervillians.</p>
+    <p class="lead"></p>
+  </main>
+
+  <footer class="mt-auto text-white-50">
+    <p></p>
+  </footer>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+        crossorigin="anonymous">
+</script>
+<script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js">
+</script>
+</body>
+</html>

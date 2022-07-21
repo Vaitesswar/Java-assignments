@@ -1,0 +1,30 @@
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Title</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>   
+    </head>
+
+<form action="createform" method="POST" th:fragment="form">
+ <div class="form-row">
+  <div class="form-group col-md-4" >
+    <label for="inputHeroName">Name</label>
+    <input type="text" name = "name" class="form-control" id="inputHeroName" aria-describedby="inputHelp" placeholder="Enter name">
+  </div>
+  <div class="form-group col-md-4">
+    <label for="inputSuperpower">Superpower</label>
+    <input type="text" name = "superpower" class="form-control" id="inputSuperpower" aria-describedby="inputHelp" placeholder="Enter superpower">
+  </div>
+  <div class="form-group col-md-4">
+    <label for="inputOrganizationName">Organization</label>
+    <input type="text" name = "organization" class="form-control" id="inputOrganizationName" aria-describedby="inputHelp" placeholder="Description">
+  </div>
+ </div>
+  <div class="form-group">
+    <label for="inputDescription">Description</label>
+    <input type="text" name = "description" class="form-control" id="inputDescription" placeholder="Description">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

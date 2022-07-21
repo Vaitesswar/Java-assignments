@@ -1,0 +1,60 @@
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>SuperheroEdit</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+   		<link th:href="@{styles/main.css}" rel="stylesheet" />    
+    </head>
+	<body>
+	  <!-- Custom styles for this template -->
+		<link href="cover.css" rel="stylesheet">
+		<body class="d-flex h-100 text-center text-white bg-dark"></body>
+		<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+		  <header class="mb-auto">
+		    <div th:replace="~{fragments/headerdropdown :: headerdropdown}"> </div>
+		  </header>
+		  <p><h1>Edit an existing superhero/supervillian record</h1></p>
+		  <p></p>
+		  <p></p>
+		  <p></p>
+		  <main class="px-3">
+		  	<form action="editSuperheroForm" method="POST">
+			 <div class="form-row">
+			  <div class="form-group col-md-4" >
+			    <label for="inputHeroName">Name</label>
+			    <input type="text" name = "name" class="form-control" id="inputHeroName" aria-describedby="inputHelp" placeholder="Enter name">
+			  </div>
+			  <div class="form-group col-md-4">
+			    <label for="inputSuperpower">Superpower</label>
+			    <input type="text" name = "superpower" class="form-control" id="inputSuperpower" aria-describedby="inputHelp" placeholder="Enter superpower">
+			  </div>
+			  <div class="form-group col-md-4">
+			    <label for="inputOrganizationName">Organization</label>
+			    <input type="text" name = "organization" class="form-control" id="inputOrganizationName" aria-describedby="inputHelp" placeholder="Enter organization">
+			  </div>
+			 </div>
+			  <div class="form-group">
+			    <label for="inputDescription">Description</label>
+			    <input type="text" name = "description" class="form-control" id="inputDescription" placeholder="Description">
+			  </div>
+			  <button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		    <p class="lead"></p>
+		    <p class="lead"></p>
+		  </main>
+		  <footer class="mt-auto text-white-50">
+		    <p> </p>
+		  </footer>
+		</div>
+	</body>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+	        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+	        crossorigin="anonymous">
+	</script>
+	<script
+	        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js">
+	</script>
+</html>

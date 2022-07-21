@@ -1,0 +1,31 @@
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Title</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>   
+    </head>
+<div class="d-flex gap-5 justify-content-center" th:fragment="dropdown">
+  <div class="dropdown-menu d-block position-static pt-0 mx-0 rounded-3 shadow overflow-hidden w-280px">
+    <form class="p-2 mb-2 bg-light border-bottom">
+      <input type="search" class="form-control" autocomplete="false" placeholder="Type to filter...">
+    </form>
+   <ul class="list-unstyled mb-0">
+      <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+        <span class="d-inline-block bg-success rounded-circle p-1"></span>
+        &nbsp Create
+      </a></li>
+      <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+        <span class="d-inline-block bg-primary rounded-circle p-1"></span>
+         &nbsp View
+      </a></li>
+      <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+        <span class="d-inline-block bg-danger rounded-circle p-1"></span>
+         &nbsp Edit
+      </a></li>
+      <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+        <span class="d-inline-block bg-info rounded-circle p-1"></span>
+         &nbsp Delete
+      </a></li>
+    </ul>
+  </div>

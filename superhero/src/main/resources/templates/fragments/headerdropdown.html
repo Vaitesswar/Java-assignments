@@ -1,0 +1,62 @@
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Title</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>   
+    </head>
+
+	<div class="bd-example" th:fragment="headerdropdown">
+	  <a class="btn btn-primary" th:href="@{homepage}" role="button">Home</a>
+	  <div class="btn-group">
+	    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Superhero</button>
+	    <div class="dropdown-menu">
+	      <a class="dropdown-item" th:href="@{superheroCreate}">Create</a>
+	      <a class="dropdown-item" th:href="@{superheroEdit}">Edit</a>
+	      <a class="dropdown-item" th:href="@{superheroDelete}">Delete</a>
+	      <hr class="dropdown-divider">
+	      <a class="dropdown-item" th:href="@{superheroView}">View a record</a>
+	      <a class="dropdown-item" href="#">View organization</a>
+	    </div>
+	  </div><!-- /btn-group -->
+	  <div class="btn-group">
+	    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Superpower</button>
+		<div class="dropdown-menu">
+	      <a class="dropdown-item" th:href="@{superpowerCreate}">Create</a>
+	      <a class="dropdown-item" th:href="@{superpowerEdit}">Edit</a>
+	      <a class="dropdown-item" th:href="@{superpowerDelete}">Delete</a>
+	      <a class="dropdown-item" th:href="@{superpowerView}">View</a>
+	    </div>
+	  </div><!-- /btn-group -->
+	  <div class="btn-group">
+	    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Location</button>
+	    <div class="dropdown-menu">
+	      <a class="dropdown-item" th:href="@{locationCreate}">Create</a>
+	      <a class="dropdown-item" th:href="@{locationEdit}">Edit</a>
+	      <a class="dropdown-item" th:href="@{locationDelete}">Delete</a>
+	      <a class="dropdown-item" th:href="@{locationView}">View</a>
+	    </div>
+	  </div><!-- /btn-group -->
+	  <div class="btn-group">
+	    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Organization</button>
+		<div class="dropdown-menu">
+	      <a class="dropdown-item" th:href="@{organizationCreate}">Create</a>
+	      <a class="dropdown-item" th:href="@{organizationEdit}">Edit</a>
+	      <a class="dropdown-item" th:href="@{organizationDelete}">Delete</a>
+	            <a class="dropdown-item" th:href="@{organizationView}">View</a>
+	    </div>
+	  </div><!-- /btn-group -->
+	  <div class="btn-group">
+	    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sighting</button>
+	    <div class="dropdown-menu">
+	      <a class="dropdown-item" th:href="@{sightingCreate}">Create</a>
+	      <a class="dropdown-item" th:href="@{sightingEdit}">Edit</a>
+	      <a class="dropdown-item" th:href="@{sightingDelete}">Delete</a>
+	      <hr class="dropdown-divider">
+	      <a class="dropdown-item" href="#">View by location</a>
+	      <a class="dropdown-item" href="#">View by superhero</a>
+	      <a class="dropdown-item" href="#">View by date</a>
+	      <a class="dropdown-item" href="#">View by organization</a>
+	    </div><!-- /btn-group -->
+	</div>
+</html>

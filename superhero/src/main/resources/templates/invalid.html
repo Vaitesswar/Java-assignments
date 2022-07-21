@@ -1,0 +1,33 @@
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Superhero - Create</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+   		<link th:href="@{styles/main.css}" rel="stylesheet" />    
+    </head>
+	<body>
+	  <!-- Custom styles for this template -->
+	    <link href="cover.css" rel="stylesheet">
+	  <body class="d-flex h-100 text-center text-white bg-dark"></body>
+	  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+	  <header class="mb-auto">
+	    <div th:replace="~{fragments/headerdropdown :: headerdropdown}"> </div>
+	  </header>
+	  <p><h1 style="color:red;">Invalid entry!</h1></p>
+	  <footer class="mt-auto text-white-50">
+	    <p> </p>
+	  </footer>
+	  </div>
+	</body>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+	        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+	        crossorigin="anonymous">
+	</script>
+	<script
+	        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js">
+	</script>
+	
+</html>
