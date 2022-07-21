@@ -1,0 +1,162 @@
+--- Lesson 1.1 ---
+1) What is JAVA? Open sourse, OOP compiled language
+2) What is compilation? Is Java compiled (compiles all code to a intermediate file like ex.class, then execution) or interpreted language (Executes each line directly)?
+Advantage of .class file is machine independent (i.e. functions on both mac or windows) while interpreted file is faster (each line of code is executed on the fly).
+
+Working with compiled languages can be nice because many bugs are found when source code is compiled. These bugs, called compilation errors prevent the code from compiling. On the contrary, interpreted languages are not compiled, so you don’t get the benefits or drawbacks of compilation errors.
+
+3) What is JDK, JRE ansd JVM? Java development kit, Java runtime environment, Java virtual machine
+4) What is OOPs? Object oriented programming
+5) What is an object? Real world entity with many properties/attributes and behvaiour/functionality (e.g. filled form containing data)
+6) What is class? Templates/blueprints for creating objects (e.g. empty form)
+7) What is static typed language? Java is one. Variables cannot interchange data types after declaration unlike in Python (dynamic typed language).
+
+--- Lesson 1.2 ---
+
+-----Github-------
+1) Create a repository with name as your github repo name.
+2a) Go to the location of files remotely (cd)
+2b) Change branches: git branch -m XXX YYY
+3) Initilaize github using "git init"
+4) Adding files into working tree . (git add #Name of the File# / git add --all)
+5) Commit your changes (git commit -m "first commit")
+6) Add main branch (git branch -M main)
+7) Connecting our local repo to github. We add origin (git remote add origin #repo URL)
+8) git push -u origin main (Push the changes) -> If problems use git pull --rebase origin main (sync)
+9) Branching: git branch XXX (To create new branches) -> git checkout XXX -> git pull --rebase origin XXX -> git push -u origin XXX
+
+
+---Day to day work ---
+1) git add
+2) git commit
+3) git push
+
+--- Lesson 1.3 ----
+4 properties of OOP
+-------------------
+1) Encapsulation 
+2) Abstraction (A brief summary of a class - contains methods without body (e.g. interface/abstract class)
+3) Inheritance (Dependency from other classes (e.g. inheriting interface or parent class) - inherit existing classes and DRY)
+4) Polymorphism (One program is behaving in multiple ways - (e.g. method overloading/interface/constructor overloading))
+
+--- Lesson 3.1 ----
+Collection -> Data structure implementation of objects
+1) List (Non-unique items) -> ArrayList (Fast iteration), LinkedList (Fast deletion/insertion), Vector (Thread safety)
+2) Set (Unique items) -> HashSet, LinkedHashSet, TreeSet (Comparable/Comparator)
+   Comparable (another method within class) and Comparator (different class)
+3) Map (dict in Python) -> Hashtable (Thread safety), HashMap (No order and no sorting) -> Faster insertion/deletion, LinkedHashMap (faster iteration) -> Ordered, TreeMap (Sorted)
+4) Queue
+
+--- Lesson 3.2 ----
+Data --> useful information
+
+DBMS - Database Management System
+Database --> organisation structure
+
+RDBMS -> Relational Database Management System (organising data in terms of tables)
+--> table -> rows and columns --> one table is related to another table using some 
+common column (See example below.)
+
+Example: -
+------------
+College DBMS
+
+Departments
+id,Dept_name,Location
+---------------------
+111,computer,Block-B <-----|
+222,civil,Block-C          |
+333,mechanical,Block-D     |
+                           | Mapping Dept in 1 database to another database
+Students                   |
+st_id,Name,Subject,Dept    |
+-----------------------    |
+101,Rajesh,Java,111 >------|
+102,USV,Motor,333
+103,Harry,Java,111
+104,John,Arts,???
+
+SQL- Structured Query Language
+
+--- Lesson 5.1 ----
+Build Tool --> Maven
+java file --> Compilation --> Class file
+project --> JAR/WAR (Java Archive File)
+builds deliverables --> builds jar/war
+helps full sdlc cycle -->
+1) dependency --> maven helps us for dependency resolution
+2) Compilation
+3) Runs all test case cycles
+4) Final build --> JAR
+5) Helps to build structure of program
+
+--- Lesson 6.1 ----
+Web application development (just request and response)
+example: - www.facebook.com
+client (browser) --> request --> domain name (facebook.com) 
+--> ip address of facebook server --> response --> client
+
+client --> who is requesting
+server --> who is entertaining requests from client
+
+MVC --> Model-View-Controller
+Model --> Database Tables/Entity (POJO classes)
+View --> User facing layer (User-interface like a webpage)
+Controller --> /home/profile --> what response should be generated from Model to View?
+
+Framework --> Minimum common work which every web application will use 
+          --> Lib (classes/methods) already available
+          --> Focus more on our business logic
+
+Spring framework --> IOC (Inversion of control) --> No need to create new objects using "new" keyword (IOC will create it)
+                 --> Bean (Object managed by Spring) given by IOC container --> Loose coupling
+
+Spring Tool Suite --> Choose Spring Starter Project -> Spring web/Spring web services
+		      --> application.properties (server.port = 8090) NO SEMICOLON
+		      --> application.properties (include information of connection to database as well as database name)
+		      --> Create a new POJO class and declare it as an entity. Create a new table for the POJO class in database
+		      --> Create a repository interface which extends the POJO class and declare it as a repository
+		      --> Create a controller class for getting the necessary information
+		      --> Right click XXX [boot] and "Run As" Spring Boot App 
+		      --> Open web browser/Postman application (e.g. localhost:8090/Student)
+
+
+Annotations
+1) @SpringBootApplication --> Indicates a configuration class that declares one or more @Bean methods 
+                              equivalent to declaring @Configuration, @EnableAutoConfiguration and @ComponentScan
+2) @RestController
+3) @RequestMapping ("/students/{name}") -> Domain name
+4) @ResponseBody -> What to be displayed on the page?
+
+Spring boot
+Microservices architecture --> Built using multiple services for submodules
+
+API --> Application programming interface (the way one app talks to another)
+
+frontend <---> backend (communicate using API)
+/students <---> {}
+
+--- Lesson 6.2 ----
+Angular setup (Run powershell as Adminstrator)
+----------------------------------------------
+1) Install node.js (check using node -v)
+2) Verify npm (npm -v)
+3) Install Angular (npm install -g @angular/cli)
+4) Create new project
+5) Set-ExecutionPolicy -ExecutionPolicy RemoteSigned (if facing any error)
+6) Open folder in Angular in VisualStudio
+7) cd "PATH TO APP"
+7) "ng serve --open" in command line to run the application
+8) "ng generate-component" NAMEOFCOMPONENT (to create child component)
+
+Angular concepts
+----------------
+
+Component: Basic building block of any angular application
+1) app.component.ts (for dynamic interface)
+2) app.component.html (for viewing)
+3) app.component.css file (for style)
+4) app.component.spec.ts (Contains the specs for ts file)
+
+root component (child component) --> index.html (Contains the root component)
+app-component --> contains the information of components
