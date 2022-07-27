@@ -1,3 +1,5 @@
+Class Github Page: https://github.com/itasworkshop/C258_Repo
+
 --- Lesson 1.1 ---
 1) What is JAVA? Open sourse, OOP compiled language
 2) What is compilation? Is Java compiled (compiles all code to a intermediate file like ex.class, then execution) or interpreted language (Executes each line directly)?
